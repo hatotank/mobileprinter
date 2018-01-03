@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="メモリスイッチ設定"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/textcolor" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onMemSwActivity"
+                android:text="設　定"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N1(ブザー音)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n1_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="ブザー音OFF"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="ブザー音ON"
+                    android:textColor="@color/textcolor" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N2(CR)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n2_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="CR無効"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CR有効"
+                    android:textColor="@color/textcolor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N3(LF)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n3_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="LF有効"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LF無効"
+                    android:textColor="@color/textcolor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N4(CRに続くLF)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n4_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="CRに続くLF有効"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRに続くLF無効"
+                    android:textColor="@color/textcolor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N5(フォント)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n5_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="FONT A(24x12)"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n5_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FONT B(16x9)"
+                    android:textColor="@color/textcolor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N6(固定)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n6_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0固定"
+                    android:textColor="@color/textcolor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N7(IrDA)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n7_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="IrDAを無効"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n7_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IrDA有効(有効モデルのみ)"
+                    android:textColor="@color/textcolor" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N8(Bluetooth)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n8_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="ﾃﾞｨｽｶﾊﾞﾘﾓｰﾄﾞ"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n8_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ﾃﾞｨｽｶﾊﾞﾘﾓｰﾄﾞにしない"
+                    android:textColor="@color/textcolor" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N9(USB機能)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n9_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="無効"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n9_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="有効"
+                    android:textColor="@color/textcolor" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TextView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N10(USBデバイスモード)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/textcolor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n10_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="設定禁止"
+                    android:textColor="@color/textcolor" />
+
+                <RadioButton
+                    android:id="@+id/radio_mem_n10_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#facd9b"
+                    android:checked="true"
+                    android:text="USBデバイスとして使用"
+                    android:textColor="@color/textcolor" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

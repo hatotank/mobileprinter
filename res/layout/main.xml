@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".demo" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/widget27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="モバイルプリンタ"
+                android:textColor="@color/textcolor"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/widget30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="印　刷"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/widget32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="プリンタデバイス選択"
+                android:textColor="@color/textcolor"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/widget31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="デバイス選択"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/widget33"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="テキスト入力(1行:半角32文字)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/textcolor"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:ems="10"
+                android:gravity="center_vertical|top"
+                android:inputType="textMultiLine|textLongMessage"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="テキストファイル選択"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;logo>ファイル選択(bmp)"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="※横幅384pxモノクロbmpのみ"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/textcolor" />
+
+</LinearLayout>
